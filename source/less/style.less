@@ -1,0 +1,23 @@
+@import "normalize.less";
+@import "variables.less";
+@import "blocks/block-content.less";
+@import "blocks/block-skills.less";
+@import "blocks/block-footer.less";
+
+body {
+	font-family: 'Rubik', sans-serif;
+	background-color: #220203;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: @tablet-width) and (max-width:1000px) {
+	body {
+		width: 768px;
+	}
+}
+@media (min-width: @mobil-width) and (max-width:767px) {
+	body {
+		width: 320px;
+	}
+}

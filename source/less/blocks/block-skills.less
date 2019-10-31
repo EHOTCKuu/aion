@@ -1,0 +1,251 @@
+.block-skills {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.397);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+	padding-bottom: 50px;
+	margin-top: -676px;
+}
+
+.wrapper-skills {
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 60px;
+}
+
+.block-skills__conteiner-skills {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	line-height: 1.231;
+	padding-top: 10px;
+	margin-bottom: -162px;
+	text-align: center;
+}
+
+.skill-one {
+	width: 80px;
+	position: relative;
+	cursor: pointer;
+}
+
+.skill-one img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.skill-one__legend,
+.skill-two__legend,
+.skill-three__legend,
+.skill-four__legend {
+	position: absolute;
+	width: 100px;
+	height: 200px;
+	top: 60px;
+	background-color: #f3bc74;
+	border: 4px solid #55130c;
+	color: black;
+	display: none;
+}
+
+.skill-one:hover .skill-one__legend,
+.skill-two:hover .skill-two__legend,
+.skill-three:hover .skill-three__legend,
+.skill-four:hover .skill-four__legend {
+	display: block;
+}
+
+.skill-two {
+	width: 144px;
+	padding-left: 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.skill-two img {
+	margin-bottom: -4px;
+}
+
+.skill-three {
+	width: 110px;
+	position: relative;
+	cursor: pointer;
+}
+
+.skill-three img {
+	margin-bottom: -10px;
+}
+
+.skill-four {
+	width: 164px;
+	margin-top: -120px;
+	position: relative;
+	cursor: pointer;
+}
+
+.skill-four img {
+	margin-bottom: -5px;
+}
+
+.skill-five {
+	padding-bottom: 181px;
+	padding-right: 30px;
+}
+
+.conteiner-skills__skill-block p {
+	margin-top: 20px;
+}
+
+.skill-one::after,
+.skill-two::after,
+.skill-five::after,
+.skill-three::after {
+	content: "";
+	background-image: url("../img/row.png");
+	background-repeat: no-repeat;
+	width: 2px;
+	height: 117px;
+	float: right;
+	position: relative;
+	top: -140px;
+	left: 20px;
+}
+
+.skill-five::after {
+	top: 30px;
+	left: 40px;
+}
+
+.skill-one::after {
+	left: 44px;
+}
+
+.skill-three::after {
+	left: 30px;
+}
+
+.block-skills__legend {
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 21px;
+	width: 805px;
+}
+
+.block-skills__legend h3 {
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.block-skills__legend h2 {
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 40px;
+}
+
+.legend__paragraph-store::after {
+	content: "";
+	width: 378px;
+	height: 1px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 38px;
+}
+
+.skill-two__legend {
+	left: 50px;
+}
+
+.skill-three__legend {
+	left: 10px;
+}
+
+.skill-four__legend {
+	left: 35px;
+}
+
+@media (min-width: @tablet-width) and (max-width:1000px) {
+	.block-skills {
+		margin-top: -280px;
+		padding-bottom: 10px;
+	}
+	.wrapper-skills {
+		width: 756px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+	}
+	.block-skills__legend h3 {
+		font-size: 20px;
+		margin-bottom: 30px;
+		margin-top: 30px;
+		width: 768px;
+	}
+	.block-skills__legend h2 {
+		font-size: 50px;
+		padding-left: 0;
+		width: 768px;
+	}
+	.block-skills__legend p {
+		width: 700px;
+		margin-left: 30px;
+		padding-left: 0;
+	}
+	.block-skills__legend {
+		width: 768px;
+	}
+}
+
+@media (min-width: @mobil-width) and (max-width:767px) {
+	.wrapper-skills {
+		width: 320px;
+		padding: 0;
+	}
+	.block-skills__conteiner-skills {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.skill-five {
+		display: none;
+	}
+	.skill-one::after,
+	.skill-two::after,
+	.skill-three::after {
+		display: none;
+	}
+	.skill-one,
+	.skill-two,
+	.skill-three,
+	.skill-four {
+		margin: 0;
+		padding: 0;
+		width: 150px;
+	}
+	.block-skills__legend {
+		width: 320px;
+		margin-top: 190px;
+	}
+	.legend__paragraph-store::after {
+		width: 280px;
+	}
+	.block-skills {
+		padding-bottom: 0;
+	}
+}

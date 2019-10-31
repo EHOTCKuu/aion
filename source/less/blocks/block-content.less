@@ -1,0 +1,348 @@
+.block-content {
+	width: 100%;
+	height: 1272px;
+	background-image: url("../img/art.jpg");
+	background-repeat: no-repeat;
+	background-size: 98%;
+	background-position: 55% 0;
+	margin-top: -10px;
+}
+
+.wrapper {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+.block-content__video-bg {
+	display: block;
+	background-image: url("../img/video border.png");
+	background-repeat: no-repeat;
+	width: 379px;
+	height: 241px;
+	position: relative;
+	z-index: 1;
+	left: 1%;
+	margin-top: -0.7%;
+	position: relative;
+}
+
+.video-stub__play {
+	display: block;
+	background-image: url("../img/play icon.png");
+	background-repeat: no-repeat;
+	position: relative;
+	width: 135px;
+	height: 77px;
+	z-index: 3;
+	left: 28%;
+	top: 32%;
+	@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+		background-image: url("../img/play-icon@2x.png");
+	}
+}
+
+.video-bg__video-stub {
+	display: block;
+	background-image: url("../img/video.jpg");
+	background-repeat: no-repeat;
+	width: 333px;
+	height: 194px;
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
+	left: 8%;
+	top: 12.5%;
+}
+
+.block-content__button {
+	display: block;
+	background-image: url("../img/button bg.png");
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 86px;
+	cursor: pointer;
+	margin-left: 1.9%;
+	margin-top: 1.5%;
+}
+
+.block-content__button:hover {
+	background-image: url("../img/button bg hover.png");
+	background-repeat: no-repeat;
+	margin-left: -0.7%;
+	margin-top: -0.6%;
+	padding-right: 30px;
+	padding-bottom: 1.2%;
+	margin-left: 0.6%;
+	margin-top: 0.47%;
+}
+
+.video-bg__video-stub:hover .video-stub__play {
+	background-image: url("../img/play icon hover.png");
+	background-repeat: no-repeat;
+	width: 135px;
+	height: 77px;
+	@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+		background-image: url("../img/play-icon-hover@2x.png");
+	}
+}
+
+.block-content__button h2 {
+	position: relative;
+	top: 40%;
+	font-size: 22px;
+	top: 34%;
+	left: 14%;
+	text-transform: uppercase;
+	color: rgb(128, 23, 21);
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	letter-spacing: 2px;
+}
+
+.block-content__button:hover h2 {
+	top: 44%;
+	left: 16%;
+	font-size: 23px;
+}
+
+.block-content__logo {
+	width: 173px;
+	height: 63.3px;
+	fill: white;
+	margin-left: 11.3%;
+	margin-bottom: 3.4%;
+	padding-top: 4%;
+}
+
+.block-content__slogan {
+	margin-left: 2.3%;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+	cursor: default;
+}
+
+.popap {
+	display: none;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	z-index: 7;
+}
+
+.popap__exit {
+	position: absolute;
+	margin-left: 10px;
+	cursor: pointer;
+	width: 33px;
+	height: 33px;
+}
+
+.popap-show,
+.overlay-show {
+	display: block;
+	animation-duration: 0.55s;
+	animation-fill-mode: both;
+	animation-name: popapInDown;
+}
+
+@keyframes popapInDown {
+	0% {
+		opacity: 0;
+		transform: translate3d(0px, -100%, 0px);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media (min-width: @tablet-width) and (max-width:1000px) {
+	.block-content {
+		background-image: url("../img/art-tablet.jpg");
+		background-size: 100%;
+		background-position: 0 0;
+	}
+	.wrapper {
+		width: 768px;
+	}
+	.block-content__logo {
+		width: 388px;
+		height: auto;
+		fill: white;
+		margin-left: 7%;
+		margin-bottom: 3.4%;
+	}
+	.block-content__slogan {
+		width: 480px;
+		height: auto;
+	}
+	.block-content__video-bg {
+		width: 600px;
+		height: 400px;
+		background-size: 100%;
+		left: 0;
+		margin-top: 6%;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.video-bg__video-stub {
+		background-size: 100%;
+		width: 525px;
+		height: 320px;
+		left: 8%;
+		top: 11.8%;
+	}
+	.video-bg__video-stub:hover .video-stub__play {
+		background-size: 70%;
+		width: 200px;
+		height: 200px;
+		left: 36%;
+		top: 26.8%;
+	}
+	.popap {
+		top: 10%;
+		left: 0;
+	}
+	.video-stub__play {
+		background-size: 70%;
+		width: 200px;
+		height: 200px;
+		left: 36%;
+		top: 27%;
+	}
+	.block-content__button {
+		background-size: 100%;
+		width: 500px;
+		height: 106px;
+		margin-left: 19%;
+		margin-top: 1.5%;
+	}
+	.block-content__button:hover {
+		width: 500px;
+		height: 122px;
+		margin-left: 18%;
+		margin-top: -1%;
+	}
+	.block-content__button h2 {
+		font-size: 32px;
+		top: 34%;
+		left: 14%;
+		width: 400px;
+		letter-spacing: 2px;
+	}
+	.block-content__button:hover h2 {
+		font-size: 34px;
+		top: 44%;
+		left: 14%;
+		width: 400px;
+		letter-spacing: 2px;
+	}
+}
+
+@media (min-width: @mobil-width) and (max-width:767px) {
+	.block-content {
+		background-image: url("../img/art-mobile.jpg");
+		background-size: 100%;
+		width: 320px;
+		margin: 0;
+		margin-bottom: -790px;
+	}
+	.wrapper {
+		width: 320px;
+	}
+	.block-content__logo {
+		width: 288px;
+		height: auto;
+		fill: white;
+		margin-left: 7%;
+		margin-bottom: 3.4%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.block-content__slogan {
+		width: 300px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.block-content__video-bg {
+		width: 300px;
+		height: 200px;
+		background-size: 100%;
+		margin-top: 1%;
+	}
+	.video-bg__video-stub {
+		background-size: 100%;
+		width: 264px;
+		height: 160px;
+		left: 7.8%;
+		top: 12%;
+		margin-right: 0;
+	}
+	.popap__video {
+		width: 300px;
+		height: auto;
+	}
+	.popap {
+		left: 10px;
+		top: 30px;
+	}
+	.video-stub__play {
+		background-size: 100%;
+		width: 100px;
+		height: 100px;
+		left: 35%;
+		top: 21%;
+		margin-right: 0;
+	}
+	.video-bg__video-stub:hover .video-stub__play {
+		background-size: 100%;
+		width: 100px;
+		height: 100px;
+		left: 35%;
+		top: 21.8%;
+	}
+	.block-content__button:hover {
+		width: 250px;
+		height: 66px;
+		margin-left: 8%;
+		margin-top: -3%;
+	}
+	.block-content__button {
+		background-size: 100%;
+		width: 250px;
+		height: 56px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+	}
+	.block-content__button h2 {
+		top: 10%;
+		font-size: 16px;
+		top: 34%;
+		left: 12%;
+		width: 400px;
+		letter-spacing: 2px;
+	}
+	.block-content__button:hover h2 {
+		font-size: 18px;
+		top: 38%;
+		left: 13%;
+		width: 400px;
+	}
+}
