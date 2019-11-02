@@ -2,52 +2,51 @@
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.397);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.212);
-	padding-bottom: 50px;
 	margin-top: -676px;
 }
 
 .wrapper-skills {
-	width: 850px;
+	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 60px;
 }
 
 .block-skills__conteiner-skills {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: space-evenly;
+	align-items: flex-start;
 	font-size: 14px;
 	color: rgb(255, 255, 255);
 	line-height: 1.231;
-	padding-top: 10px;
-	margin-bottom: -162px;
 	text-align: center;
+	height: 128px;
+	padding-top: 66px;
+	width: 900px;
 }
 
-.skill-one {
-	width: 80px;
-	position: relative;
-	cursor: pointer;
+.conteiner-skills__skill-block {
+	width: 160px;
 }
 
-.skill-one img {
+.skill-one p {
+	width: 100px;
 	margin-left: auto;
 	margin-right: auto;
-	display: block;
+}
+
+.skill-three p {
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .skill-one__legend,
 .skill-two__legend,
 .skill-three__legend,
 .skill-four__legend {
-	position: absolute;
-	width: 100px;
-	height: 200px;
-	top: 60px;
-	background-color: #f3bc74;
-	border: 4px solid #55130c;
-	color: black;
+	border: 1px solid rgb(144, 52, 52);
+	background-color: rgb(34, 2, 8);
+	color: white;
 	display: none;
 }
 
@@ -58,73 +57,40 @@
 	display: block;
 }
 
-.skill-two {
-	width: 144px;
-	padding-left: 20px;
-	position: relative;
-	cursor: pointer;
-}
-
-.skill-two img {
-	margin-bottom: -4px;
-}
-
-.skill-three {
-	width: 110px;
-	position: relative;
-	cursor: pointer;
-}
-
-.skill-three img {
-	margin-bottom: -10px;
-}
-
+.skill-one,
+.skill-two,
+.skill-three,
 .skill-four {
-	width: 164px;
-	margin-top: -120px;
-	position: relative;
 	cursor: pointer;
 }
 
-.skill-four img {
-	margin-bottom: -5px;
+.skill-four::before,
+.skill-three::before {
+	content: "";
+	width: 4px;
+	height: 117px;
+	background-image: url("../img/row.png");
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.skill-five::before,
+.skill-two::before {
+	content: "";
+	width: 4px;
+	height: 117px;
+	background-image: url("../img/row.png");
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.skill-five img {
+	margin-top: -54px;
+	margin-left: -10px;
 }
 
 .skill-five {
-	padding-bottom: 181px;
-	padding-right: 30px;
-}
-
-.conteiner-skills__skill-block p {
-	margin-top: 20px;
-}
-
-.skill-one::after,
-.skill-two::after,
-.skill-five::after,
-.skill-three::after {
-	content: "";
-	background-image: url("../img/row.png");
-	background-repeat: no-repeat;
-	width: 2px;
-	height: 117px;
-	float: right;
-	position: relative;
-	top: -140px;
-	left: 20px;
-}
-
-.skill-five::after {
-	top: 30px;
-	left: 40px;
-}
-
-.skill-one::after {
-	left: 44px;
-}
-
-.skill-three::after {
-	left: 30px;
+	width: 230px;
 }
 
 .block-skills__legend {
@@ -134,6 +100,9 @@
 	letter-spacing: 1px;
 	line-height: 21px;
 	width: 805px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 63px;
 }
 
 .block-skills__legend h3 {
@@ -181,15 +150,12 @@
 }
 
 @media (min-width: @tablet-width) and (max-width:1000px) {
-	.block-skills {
-		margin-top: -280px;
-		padding-bottom: 10px;
+	.block-skills__conteiner-skills {
+		width: 768px;
 	}
 	.wrapper-skills {
-		width: 756px;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 0;
+		width: 768px;
+		margin-top: 320px;
 	}
 	.block-skills__legend h3 {
 		font-size: 20px;
@@ -210,6 +176,12 @@
 	.block-skills__legend {
 		width: 768px;
 	}
+	.skill-two:hover .skill-two__legend,
+	.skill-one:hover .skill-one__legend,
+	.skill-three:hover .skill-three__legend,
+	.skill-four:hover .skill-four__legend {
+		display: none;
+	}
 }
 
 @media (min-width: @mobil-width) and (max-width:767px) {
@@ -221,13 +193,21 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: flex-start;
+		width: 320px;
 	}
 	.skill-five {
 		display: none;
 	}
-	.skill-one::after,
-	.skill-two::after,
-	.skill-three::after {
+	.skill-one::before,
+	.skill-two::before,
+	.skill-three::before,
+	.skill-four:before {
+		display: none;
+	}
+	.skill-two:hover .skill-two__legend,
+	.skill-one:hover .skill-one__legend,
+	.skill-three:hover .skill-three__legend,
+	.skill-four:hover .skill-four__legend {
 		display: none;
 	}
 	.skill-one,
@@ -237,15 +217,17 @@
 		margin: 0;
 		padding: 0;
 		width: 150px;
+		cursor: default;
 	}
 	.block-skills__legend {
 		width: 320px;
-		margin-top: 190px;
+		margin-top: 120px;
 	}
 	.legend__paragraph-store::after {
 		width: 280px;
 	}
 	.block-skills {
 		padding-bottom: 0;
+		margin-top: -800px;
 	}
 }

@@ -65,6 +65,7 @@
 	cursor: pointer;
 	margin-left: 1.9%;
 	margin-top: 1.5%;
+	text-decoration: none;
 }
 
 .block-content__button:hover {
@@ -147,6 +148,8 @@
 	cursor: pointer;
 	width: 33px;
 	height: 33px;
+	top: 0;
+	right: -40px;
 }
 
 .popap-show,
@@ -166,6 +169,10 @@
 		opacity: 1;
 		transform: none;
 	}
+}
+
+.hidden {
+	display: none;
 }
 
 @media (min-width: @tablet-width) and (max-width:1000px) {
@@ -258,7 +265,6 @@
 		background-size: 100%;
 		width: 320px;
 		margin: 0;
-		margin-bottom: -790px;
 	}
 	.wrapper {
 		width: 320px;
